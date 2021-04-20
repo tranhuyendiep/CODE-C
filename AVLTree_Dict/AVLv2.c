@@ -11,10 +11,9 @@ int main()
 	int n,i,op;
     word *ptr = dict;
 	
-    for(; ptr->en; ptr++ )
-    {
-        root=insert(root, ptr);
-    }
+    while(ptr->en)
+        root=insert(root, ptr++);
+
     print_ascii_tree(root);
 /*
 	do
